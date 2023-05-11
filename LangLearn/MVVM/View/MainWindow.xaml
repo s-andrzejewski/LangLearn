@@ -6,29 +6,14 @@
         xmlns:local="clr-namespace:LangLearn"
         mc:Ignorable="d"
         Title="LangLearn"
-        Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="4*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
+        Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-        <TextBlock Text="LOGO" FontSize="32" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    <Border Background="#272537"
+            CornerRadius="20">
 
-        <TextBlock Text="Opcja 1" Grid.Row="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
-        <TextBlock Text="Opcja 2" Grid.Row="2" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
-        <TextBlock Text="Opcja 3" Grid.Row="3" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
-        <TextBlock Text="Opcja 4" Grid.Row="4" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
-        <TextBlock Text="Opcja 5" Grid.Row="5" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
-
-    </Grid>
+    </Border>
 </Window>

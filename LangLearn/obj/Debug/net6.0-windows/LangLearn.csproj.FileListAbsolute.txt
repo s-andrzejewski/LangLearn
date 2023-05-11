@@ -17,5 +17,5 @@ C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows
 C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows\LangLearn.pdb
 C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows\LangLearn.genruntimeconfig.cache
 C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows\ref\LangLearn.dll
-C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows\View\MainWindow.g.cs
-C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows\View\MainWindow.baml
+C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows\MVVM\View\MainWindow.g.cs
+C:\Users\sandr\source\repos\LangLearnSolution\LangLearn\obj\Debug\net6.0-windows\MVVM\View\MainWindow.baml
