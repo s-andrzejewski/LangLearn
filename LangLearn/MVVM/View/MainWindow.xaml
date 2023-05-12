@@ -32,22 +32,26 @@
                 <RadioButton Content="Quiz"
                              Height="50"
                              Foreground="White"
-                             FontSize="14"/>
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
                 
                 <RadioButton Content="Dodaj nowe słówka"
                              Height="50"
                              Foreground="White"
-                             FontSize="14" Checked="RadioButton_Checked"/>
+                             FontSize="14" Checked="RadioButton_Checked"
+                             Style="{StaticResource MenuButtonTheme}"/>
                 
                 <RadioButton Content="Edytuj słówka z bazy"
                              Height="50"
                              Foreground="White"
-                             FontSize="14"/>
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
                 
                 <RadioButton Content="Usuń słówko z bazy"
                              Height="50"
                              Foreground="White"
-                             FontSize="14"/>
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
         </Grid>
     </Border>
