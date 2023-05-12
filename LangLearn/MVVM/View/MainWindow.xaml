@@ -14,6 +14,41 @@
 
     <Border Background="#272537"
             CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image Source="/Assets/img/logo-variants/logo-no-background.png"
+                   Margin="10"/>
+
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Quiz"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"/>
+                
+                <RadioButton Content="Dodaj nowe słówka"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14" Checked="RadioButton_Checked"/>
+                
+                <RadioButton Content="Edytuj słówka z bazy"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"/>
+                
+                <RadioButton Content="Usuń słówko z bazy"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"/>
+            </StackPanel>
+        </Grid>
     </Border>
 </Window>
