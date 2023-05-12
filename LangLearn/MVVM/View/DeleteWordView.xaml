@@ -31,7 +31,7 @@
 
             <StackPanel MaxWidth="350"
                         Margin="0 10 0 0">
-                <TextBlock Text="Wyboerz słówko ze swojej bazy:"
+                <TextBlock Text="Wybierz słówko ze swojej bazy:"
                            Margin="5 0 0 5"
                            Foreground="White"/>
                 <ComboBox>
