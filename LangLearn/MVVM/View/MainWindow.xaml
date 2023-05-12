@@ -12,7 +12,7 @@
         Background="Transparent"
         AllowsTransparency="True">
 
-    <Border Background="#272537"
+    <Border Background="#2C2A3E"
             CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -25,10 +25,15 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image Source="/Assets/img/logo-variants/logo-no-background.png"
+            <Image x:Name="MainLogo"
+                   Source="/Assets/img/logo-variants/logo-no-background.png"
+                   Grid.Column="0"
+                   Grid.Row="0"
                    Margin="10"/>
 
-            <StackPanel x:Name="Menu"  Grid.Row="1">
+            <StackPanel x:Name="Menu"
+                        Grid.Row="1"
+                        Background="#272537">
                 <RadioButton Content="Quiz"
                              GroupName="Menu"
                              Checked="MenuOption_Checked"

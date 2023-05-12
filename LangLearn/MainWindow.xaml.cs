@@ -15,6 +15,7 @@ namespace LangLearn
         {
             InitializeComponent();
             DataContext = _viewModel;
+            Header.Text = "Quiz";
         }
 
         private void MenuOption_Checked(object sender, RoutedEventArgs e)
