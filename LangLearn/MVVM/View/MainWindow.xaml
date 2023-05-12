@@ -28,31 +28,48 @@
             <Image Source="/Assets/img/logo-variants/logo-no-background.png"
                    Margin="10"/>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel x:Name="Menu"  Grid.Row="1">
                 <RadioButton Content="Quiz"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
                 
                 <RadioButton Content="Dodaj nowe słówka"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
                              Height="50"
                              Foreground="White"
-                             FontSize="14" Checked="RadioButton_Checked"
+                             FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
                 
                 <RadioButton Content="Edytuj słówka z bazy"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
                 
                 <RadioButton Content="Usuń słówko z bazy"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
+
+            <TextBlock x:Name="Header" 
+                       Text="{Binding Path=SelectedOption.Content, ElementName=Menu}"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Left"
+                       Margin="15"
+                       Grid.Column="1"/>
         </Grid>
     </Border>
 </Window>
