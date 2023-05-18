@@ -23,6 +23,7 @@ namespace LangLearn
             RadioButton radioButton = sender as RadioButton;
             if (radioButton != null)
             {
+                // Sets header text based on clicked menu option:
                 string headerText = radioButton.Content as string;
                 if (!string.IsNullOrEmpty(headerText))
                 {
