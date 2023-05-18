@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LangLearn"
+        xmlns:viewModel="clr-namespace:LangLearn.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="LangLearn"
         Height="600" Width="920"
@@ -12,6 +13,10 @@
         Background="Transparent"
         AllowsTransparency="True">
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
     <Border Background="#2C2A3E"
             CornerRadius="20">
         <Grid>
@@ -75,6 +80,11 @@
                        HorizontalAlignment="Left"
                        Margin="15"
                        Grid.Column="1"/>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
         </Grid>
     </Border>
 </Window>
