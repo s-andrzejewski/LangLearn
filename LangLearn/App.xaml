@@ -15,6 +15,22 @@
                 <view:HomeView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:QuizViewModel}">
+                <view:QuizView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AddWordViewModel}">
+                <view:AddWordView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:EditWordViewModel}">
+                <view:EditWordView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DeleteWordViewModel}">
+                <view:DeleteWordView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
