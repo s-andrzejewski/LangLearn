@@ -39,13 +39,24 @@
             <StackPanel x:Name="Menu"
                         Grid.Row="1"
                         Background="#272537">
+                
+                <RadioButton Content="Home"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding HomeViewCommand}"/>
+                
                 <RadioButton Content="Quiz"
                              GroupName="Menu"
                              Checked="MenuOption_Checked"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding QuizViewCommand}"/>
                 
                 <RadioButton Content="Dodaj nowe słówka"
                              GroupName="Menu"
@@ -53,7 +64,8 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AddViewCommand}"/>
                 
                 <RadioButton Content="Edytuj słówka z bazy"
                              GroupName="Menu"
@@ -61,7 +73,8 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding EditViewCommand}"/>
                 
                 <RadioButton Content="Usuń słówko z bazy"
                              GroupName="Menu"
@@ -69,7 +82,8 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding DelViewCommand}"/>
             </StackPanel>
 
             <TextBlock x:Name="Header" 
