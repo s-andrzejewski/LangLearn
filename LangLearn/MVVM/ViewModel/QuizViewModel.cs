@@ -92,11 +92,11 @@ namespace LangLearn.MVVM.ViewModel
 
         private void InitializeQuiz()
         {
-            // Przygotuj pytania
+            // Give some random questions
             var randomWords = Words.OrderBy(w => Guid.NewGuid()).Take(10);
             _quizQuestions = new List<Word>(randomWords);
 
-            // Inicjalizuj licznik i wyświetl pierwsze pytanie
+            // counter initialize
             _currentQuestionIndex = 0;
             DisplayQuestion();
         }
@@ -118,17 +118,16 @@ namespace LangLearn.MVVM.ViewModel
         {
             if (_currentQuestionIndex < _quizQuestions.Count)
             {
-                // Wyświetl pytanie
+                // show question
                 CurrentQuestion = _quizQuestions[_currentQuestionIndex];
             }
             else
             {
-                // Quiz zakończony
+                // quiz ended
                 MessageBox.Show($"Koniec quizu! Twój wynik: {_quizScore}/10");
 
                 MessageBoxResult result = MessageBox.Show("Rozpoczynamy od nowa", "Quiz", MessageBoxButton.OK);
 
-                // Jeśli użytkownik kliknął "OK", zresetuj quiz i rozpocznij od nowa
                 if (result == MessageBoxResult.OK)
                 {
                     ResetQuiz();
@@ -151,26 +150,24 @@ namespace LangLearn.MVVM.ViewModel
 
         private void CheckAnswer()
         {
-            // Pobierz aktualne pytanie
+            // print actual question
             Word currentQuestion = _quizQuestions[_currentQuestionIndex];
 
             // Sprawdź odpowiedź
             if (currentQuestion.TranslatedWord.Equals(UserAnswer, StringComparison.OrdinalIgnoreCase))
             {
-                // Odpowiedź poprawna
+                // good answer
                 _quizScore++;
                 MessageBox.Show("Poprawna odpowiedź!");
             }
             else
             {
-                // Odpowiedź niepoprawna
+                // bad answer
                 MessageBox.Show("Niepoprawna odpowiedź!");
             }
 
-            // Przejdź do kolejnego pytania
+            // next question
             _currentQuestionIndex++;
-
-            // Wyświetl kolejne pytanie
             DisplayQuestion();
         }
 

@@ -17,60 +17,53 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" VerticalAlignment="Center">
-
             <TextBlock Text="Edytor słówek"
                        Foreground="White"
                        FontSize="18"
-                       HorizontalAlignment="center"/>
+                       HorizontalAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" VerticalAlignment="top">
-
-
+        <StackPanel Grid.Row="1" VerticalAlignment="Top">
             <StackPanel MaxWidth="350" Margin="0 10 0 0">
-                <TextBlock Text="Wyboerz słówko ze swojej bazy:"
+                <TextBlock Text="Wybierz słówko ze swojej bazy:"
                            Margin="5 0 0 5"
                            Foreground="White"/>
-                <ComboBox>
-                    <ComboBoxItem>Wybierz słówko</ComboBoxItem>
-                    <ComboBoxItem>Słówko 1</ComboBoxItem>
-                    <ComboBoxItem>Słówko 2</ComboBoxItem>
+                <ComboBox ItemsSource="{Binding Words}"
+                          SelectedItem="{Binding SelectedWord}"
+                          DisplayMemberPath="OriginalWord">
                 </ComboBox>
             </StackPanel>
-
 
             <StackPanel MaxWidth="350" Margin="0 10 0 0">
                 <TextBlock Text="Przykładowe zdanie w j. obcym z miejscem na słówko:"
                            Margin="5 0 0 5"
                            Foreground="White"/>
-                <TextBox Text="Wpisz przykład zdania"
+                <TextBox Text="{Binding SelectedWord.SentenceExample}"
                          Padding="5 5 5 5"/>
             </StackPanel>
 
             <StackPanel MaxWidth="350" Margin="0 10 0 0">
                 <TextBlock Text="Znaczenie słówka po polsku (może być więcej niż 1):"
-                       Margin="5 0 0 5"
-                       Foreground="White"/>
-                <TextBox Text="Słówko po polsku"
+                           Margin="5 0 0 5"
+                           Foreground="White"/>
+                <TextBox Text="{Binding SelectedWord.TranslatedWord}"
                          Padding="5 5 5 5"/>
             </StackPanel>
 
             <StackPanel MaxWidth="350" Margin="0 10 0 0">
-                <TextBlock Text="Odpowiedź w j.obcym:"
-                       Margin="5 0 0 5"
-                       Foreground="White"/>
-                <TextBox Text="Odpowiedź"
+                <TextBlock Text="Odpowiedź w j. obcym:"
+                           Margin="5 0 0 5"
+                           Foreground="White"/>
+                <TextBox Text="{Binding SelectedWord.OriginalWord}"
                          Padding="5 5 5 5"/>
-                
             </StackPanel>
-
 
             <Button Width="100" Height="25"
                     Margin="0 10 0 0"
                     Background="White"
                     Foreground="#2C2A3E"
-                    Content="Zapisz zmiany"/>
-
+                    Content="Zapisz zmiany"
+                    Command="{Binding SaveChangesCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>
