@@ -34,10 +34,9 @@
                 <TextBlock Text="Wybierz słówko ze swojej bazy:"
                            Margin="5 0 0 5"
                            Foreground="White"/>
-                <ComboBox>
-                    <ComboBoxItem>Wybierz słówko</ComboBoxItem>
-                    <ComboBoxItem>Słówko 1</ComboBoxItem>
-                    <ComboBoxItem>Słówko 2</ComboBoxItem>
+                <ComboBox ItemsSource="{Binding Words}"
+                          SelectedItem="{Binding SelectedWord}"
+                          DisplayMemberPath="OriginalWord">
                 </ComboBox>
             </StackPanel>
 
@@ -46,7 +45,8 @@
                     Background="#FF3950"
                     Foreground="White"
                     FontWeight="Bold"
-                    Content="Usuń słówko"/>
+                    Content="Usuń słówko"
+                    Command="{Binding DeleteWordCommand}"/>
 
         </StackPanel>
     </Grid>
