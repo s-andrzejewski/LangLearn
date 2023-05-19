@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace LangLearn.MVVM.Model
 {
@@ -14,4 +10,3 @@ namespace LangLearn.MVVM.Model
         public string SentenceExample { get; set; }
     }
 }
-
