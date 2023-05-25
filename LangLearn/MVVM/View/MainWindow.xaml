@@ -21,14 +21,14 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        
-        <TextBlock Text="LOGO" Grid.Row="0" Grid.Column="0" FontSize="32" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25px"/>
-        
-        <TextBlock Text="Opcja 1" Grid.Row="1" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Cursor="Hand" Margin="25px 0 0 0"/>
-        <TextBlock Text="Opcja 2" Grid.Row="2" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Cursor="Hand" Margin="25px 0 0 0"/>
-        <TextBlock Text="Opcja 3" Grid.Row="3" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Cursor="Hand" Margin="25px 0 0 0"/>
-        <TextBlock Text="Opcja 4" Grid.Row="4" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Cursor="Hand" Margin="25px 0 0 0"/>
-        <TextBlock Text="Opcja 5" Grid.Row="5" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Cursor="Hand" Margin="25px 0 0 0"/>
+
+        <TextBlock Text="LOGO" FontSize="32" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Opcja 1" Grid.Row="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
+        <TextBlock Text="Opcja 2" Grid.Row="2" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
+        <TextBlock Text="Opcja 3" Grid.Row="3" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
+        <TextBlock Text="Opcja 4" Grid.Row="4" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
+        <TextBlock Text="Opcja 5" Grid.Row="5" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
 
     </Grid>
 </Window>
