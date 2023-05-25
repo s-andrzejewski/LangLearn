@@ -1,0 +1,104 @@
+﻿<Window x:Class="LangLearn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LangLearn"
+        xmlns:viewModel="clr-namespace:LangLearn.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="LangLearn"
+        Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
+    <Border Background="#2C2A3E"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image x:Name="MainLogo"
+                   Source="/Assets/img/logo-variants/logo-no-background.png"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Margin="10"/>
+
+            <StackPanel x:Name="Menu"
+                        Grid.Row="1"
+                        Background="#272537">
+                
+                <RadioButton Content="Home"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding HomeViewCommand}"/>
+                
+                <RadioButton Content="Quiz"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding QuizViewCommand}"/>
+                
+                <RadioButton Content="Dodaj nowe słówka"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AddViewCommand}"/>
+                
+                <RadioButton Content="Edytuj słówka z bazy"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding EditViewCommand}"/>
+                
+                <RadioButton Content="Usuń słówko z bazy"
+                             GroupName="Menu"
+                             Checked="MenuOption_Checked"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding DelViewCommand}"/>
+            </StackPanel>
+
+            <TextBlock x:Name="Header" 
+                       Text="{Binding Path=SelectedOption.Content, ElementName=Menu}"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Left"
+                       Margin="15"
+                       Grid.Column="1"/>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+        </Grid>
+    </Border>
+</Window>
